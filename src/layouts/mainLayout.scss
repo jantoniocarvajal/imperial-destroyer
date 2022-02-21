@@ -1,0 +1,50 @@
+.layout {
+  display: grid;
+  grid-template-columns: 18rem 1fr;
+  grid-template-rows: 80px 1fr 80px;
+  min-height: 100vh;
+}
+
+.header {
+  // grid-area: 1 / 1 / 2 / 3;
+  grid-area: 1 / 2 / 4 / 3;
+}
+
+.aside {
+  grid-area: 2 / 1 / 4 / 2;
+}
+
+.main {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.footer {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+// .root {
+//   display: flex;
+//   height: 100%;
+//   overflow: hidden;
+//   width: 100%;
+// }
+
+// .wrapper {
+//   display: flex;
+//   flex: "1 1 auto";
+//   overflow: hidden;
+//   padding-top: 64;
+//   padding-left: 256;
+// }
+
+// .contentContainer {
+//   display: "flex";
+//   flex: "1 1 auto";
+//   overflow: "hidden";
+// }
+
+// .content {
+//   flex: "1 1 auto";
+//   height: "100%";
+//   overflow: "auto";
+// }
