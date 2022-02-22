@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/imperial-destroyer/static/css/main.b2789828.css",
+    "main.js": "/imperial-destroyer/static/js/main.0061d236.js",
+    "index.html": "/imperial-destroyer/index.html",
+    "main.b2789828.css.map": "/imperial-destroyer/static/css/main.b2789828.css.map",
+    "main.0061d236.js.map": "/imperial-destroyer/static/js/main.0061d236.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2789828.css",
+    "static/js/main.0061d236.js"
+  ]
+}
