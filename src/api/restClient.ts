@@ -1,4 +1,4 @@
-import { PageCollection, Planet } from "./model";
+import { PageCollection, Planet, Starship } from "./model";
 
 export type UrlCreator = ReturnType<typeof createUrlCreator>;
 
@@ -6,7 +6,8 @@ function createUrlCreator(apiUrl: string) {
   return {
     planets: (page?: number) => `${apiUrl}/planets${page ? `/?page=${page}` : ""}`,
     searchPlanets: (search: string) => `${apiUrl}/planets/?search=${search}`,
-    starships: () => `${apiUrl}/starships`,
+    starships: (page?: number) => `${apiUrl}/starships${page ? `/?page=${page}` : ""}`,
+    searchStarships: (search: string) => `${apiUrl}/starships/?search=${search}`,
   };
 }
 
@@ -45,5 +46,17 @@ export class RestApiClient {
     return get(this.urlCreator.searchPlanets(search))
       .then((response) => checkStatus(response))
       .then<PageCollection<Planet>>((response) => response.json());
+  }
+
+  public getStarships(page?: number) {
+    return get(this.urlCreator.starships(page))
+      .then((response) => checkStatus(response))
+      .then<PageCollection<Starship>>((response) => response.json());
+  }
+
+  public searchStarships(search: string) {
+    return get(this.urlCreator.searchStarships(search))
+      .then((response) => checkStatus(response))
+      .then<PageCollection<Starship>>((response) => response.json());
   }
 }

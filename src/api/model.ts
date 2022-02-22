@@ -79,3 +79,37 @@ export interface Starship {
   edited: string;
   url: string;
 }
+
+export function imageStarship(name: string) {
+  switch (name) {
+    case "CR90 corvette":
+      return "img/starships/cr90corvette.png";
+
+    case "Death Star":
+      return "img/starships/deathStar.png";
+
+    case "Executor":
+      return "img/starships/Executor_BF2.png";
+
+    case "Star Destroyer":
+      return "img/starships/ImperialClassStarDestroyer.png";
+
+    case "Millennium Falcon":
+      return "img/starships/milleniumFalcon.png";
+
+    case "Rebel transport":
+      return "img/starships/rebelTransport.jpg";
+
+    case "TIE Advanced x1":
+      return "img/starships/SWBF_TIE_Avanzado_x1.png";
+
+    case "X-wing":
+      return "img/starships/X-wing.png";
+
+    case "Y-wing":
+      return "img/starships/Y-wing.png";
+
+    default:
+      return "img/starships/rebelTransport.jpg";
+  }
+}
